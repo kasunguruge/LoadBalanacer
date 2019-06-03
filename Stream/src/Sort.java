@@ -16,7 +16,7 @@ public class Sort {
 
 
         List<Employee> sortedEmployees3=Employee.getEmployees().stream()
-                .sorted((e1,e2)-> e1.getMarks().compareTo(e2.getMarks())).collect(Collectors.toList());
+                .sorted((e1,e2)-> new Integer(e1.getMarks()).compareTo(e2.getMarks())).collect(Collectors.toList());
 
         List<Employee> sortedEmployees4=Employee.getEmployees().stream()
 
