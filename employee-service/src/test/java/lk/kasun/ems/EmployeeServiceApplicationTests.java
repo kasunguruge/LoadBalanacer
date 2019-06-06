@@ -1,4 +1,4 @@
-package lk.tharindu.ems;
+package lk.kasun.ems;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

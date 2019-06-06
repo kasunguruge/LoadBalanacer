@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -27,14 +29,14 @@ public class AllocationController {
     }
 
     @RequestMapping(value = "/getAllocation/{id}", method = RequestMethod.GET)
-    public ResponseEntity<Allocation> fetchAllocation(@PathVariable Integer id) {
+    public ResponseEntity<List<Allocation>> fetchAllocation(@PathVariable Integer id) {
         Allocation allocation = new Allocation();
         allocation.setId(id);
         Allocation allocation1 = allocationService.fetchAllocation(allocation);
         if (allocation1 == null) {
             return ResponseEntity.notFound().build();
         } else {
-            return ResponseEntity.ok(allocation1);
+            return ResponseEntity.ok(Arrays.asList(allocation1));
         }
     }
 

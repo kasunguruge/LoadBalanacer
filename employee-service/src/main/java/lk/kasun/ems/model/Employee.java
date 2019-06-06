@@ -1,4 +1,4 @@
-package lk.tharindu.ems.model;
+package lk.kasun.ems.model;
 
 import java.util.List;
 

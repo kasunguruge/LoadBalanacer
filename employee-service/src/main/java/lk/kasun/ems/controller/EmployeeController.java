@@ -1,4 +1,4 @@
-package lk.tharindu.ems.controller;
+package lk.kasun.ems.controller;
 
 import java.util.List;
 
@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import lk.tharindu.ems.model.Address;
-import lk.tharindu.ems.model.Employee;
-import lk.tharindu.ems.model.Project;
-import lk.tharindu.ems.service.EmployeeService;
+import lk.kasun.ems.model.Address;
+import lk.kasun.ems.model.Employee;
+import lk.kasun.ems.model.Project;
+import lk.kasun.ems.service.EmployeeService;
 import org.springframework.web.client.RestTemplate;
 
 @RestController

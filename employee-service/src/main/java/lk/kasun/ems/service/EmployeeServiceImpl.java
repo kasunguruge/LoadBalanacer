@@ -1,9 +1,10 @@
-package lk.tharindu.ems.service;
+package lk.kasun.ems.service;
 
 import java.util.List;
 import java.util.Optional;
 
-import lk.tharindu.ems.model.Allocation;
+import lk.kasun.ems.model.Allocation;
+import lk.kasun.ems.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -13,9 +14,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationDetails;
 import org.springframework.stereotype.Service;
 
-import lk.tharindu.ems.model.Employee;
-import lk.tharindu.ems.model.Telephone;
-import lk.tharindu.ems.repository.EmployeeRepository;
+import lk.kasun.ems.model.Employee;
+import lk.kasun.ems.model.Telephone;
 import org.springframework.web.client.RestTemplate;
 
 
@@ -59,7 +59,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 			//
 			ResponseEntity<Allocation[]> responseEntity;
 			HttpEntity<String> httpEntity=new HttpEntity<>("",httpHeaders);
-			 responseEntity=restTemplate.exchange("http://allocation-service/emscloud/allocations/".
+			 responseEntity=restTemplate.exchange("http://allocation-service/emscloud/getAllocation/".
 					 concat(employee.getId().toString()),HttpMethod.GET,httpEntity, Allocation[].class);
 
 

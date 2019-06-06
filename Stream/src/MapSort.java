@@ -57,16 +57,15 @@ public class MapSort {
 
         vehicles.entrySet().stream()
 
-                .sorted((e1,e2)->-e1.getKey().compareTo(e2.getKey()))
+                .sorted((e3,e4)->-e3.getKey().compareTo(e4.getKey()))
+                .peek(e-> integer1.add(e.getKey()))
+                .collect(Collectors.toList()).stream()
+
+                 .sorted((e1,e2)->e1.getValue().compareTo(e2.getValue()))
 
                 .filter(e -> e.getValue()!="Ship")
                 .peek(e-> string1.add(e.getValue()))
-                .collect(Collectors.toList()).stream()
-                .sorted((e3,e4)->e3.getValue().compareTo(e4.getValue()))
-
-                .peek(e-> integer1.add(e.getKey()))
                 .collect(Collectors.toList()).stream();
-
 
         System.out.println(string1);
         System.out.println(integer1);

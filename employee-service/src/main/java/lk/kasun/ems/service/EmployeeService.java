@@ -1,8 +1,8 @@
-package lk.tharindu.ems.service;
+package lk.kasun.ems.service;
 
 import java.util.List;
 
-import lk.tharindu.ems.model.Employee;
+import lk.kasun.ems.model.Employee;
 
 public interface EmployeeService {
 

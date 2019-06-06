@@ -1,8 +1,8 @@
-package lk.tharindu.ems.repository;
+package lk.kasun.ems.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import lk.tharindu.ems.model.Employee;
+import lk.kasun.ems.model.Employee;
 
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 
