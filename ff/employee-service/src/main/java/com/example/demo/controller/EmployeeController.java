@@ -67,9 +67,9 @@ public class EmployeeController {
 	}
 
 	@RequestMapping(value = "/employee/{id}", method = RequestMethod.GET)
-	public ResponseEntity<Employee> fetchEmployee(@PathVariable Integer id, HttpHeaders httpHeaders) {
+	public ResponseEntity<Employee> fetchEmployee(@PathVariable Integer id) {
 		Employee employee = new Employee();
-
+		HttpHeaders httpHeaders=new HttpHeaders();
 		OAuth2AuthenticationDetails details=(OAuth2AuthenticationDetails)
 				SecurityContextHolder.getContext().getAuthentication().getDetails();
 
@@ -86,9 +86,9 @@ public class EmployeeController {
 	}
 	
 	@RequestMapping(value = "/employee/{id}/projects", method = RequestMethod.GET)
-	public ResponseEntity<List<Project>> fetchEmployeeProjects(@PathVariable Integer id, HttpHeaders httpHeaders) {
+	public ResponseEntity<List<Project>> fetchEmployeeProjects(@PathVariable Integer id) {
 		Employee employee = new Employee();
-
+		HttpHeaders httpHeaders=new HttpHeaders();
 		OAuth2AuthenticationDetails details=(OAuth2AuthenticationDetails)
 				SecurityContextHolder.getContext().getAuthentication().getDetails();
 
